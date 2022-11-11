@@ -5,5 +5,5 @@ Hey, there! I'm a Solution Engineer and this repository is related to my NoSQL p
 Date - 07-11-2022
 - practiced all the commands in practice.mongodb file
 
-Date - 08-11-2022
-- practiced some of the commands in practice2.mongodb file
+Date - 09-11-2022
+- practiced some of the commands of aggregation in practice2.mongodb file 
