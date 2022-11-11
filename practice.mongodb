@@ -1,0 +1,87 @@
+show dbs 
+
+use Practice 
+
+db 
+
+db.dropDatabase 
+
+show collections 
+
+db.createCollection('Training1')
+
+db.Training1.drop()
+
+db.Training.insert({
+    "name":"Anushka Kesarwani",
+    "lang":"Java",
+    "company":"Deqode"
+})                                
+
+db.Training.insertOne({
+    "name":"Anushka Kesarwani",
+    "lang":"Java",
+    "company":"Deqode"
+}) 
+
+
+db.Training.insert([{
+    "name":"Anushka Kesarwani",
+    "lang":"Java",
+    "company":"Deqode",
+    "date":new Date()
+},
+{
+    "name":"abc xyz",
+    "lang":"JavaScript",
+    "company":"Deqode"
+},
+{
+    "name":"abc",
+    "lang":"Ruby on Rails",
+    "company":"Deqode"
+}])  
+
+db.Training.insertMany([{
+    "name":"Anushka Kesarwani",
+    "lang":"Java",
+    "company":"Deqode"
+},
+{
+    "name":"abc xyz",
+    "lang":"JavaScript",
+    "company":"Deqode"
+},
+{
+    "name":"abc",
+    "lang":"Ruby on Rails",
+    "company":"Deqode"
+}])                                    
+
+db.Training.find() 
+
+db.Training.find().pretty 
+
+db.Training.find({"name":"Anushka Kesarwani"})
+
+db.Training.findOne({"name":"Anushka Kesarwani"})
+
+db.Training.find({"name":"Anushka Kesarwani", "lang":"Java"})
+
+db.Training.find({"name":"Anushka Kesarwani", "lang":"Java"}).pretty().limit(2)
+
+db.Training.find().limit(3)
+
+db.Training.find().count()
+
+db.Training.find({"name":"Anushka Kesarwani", "lang":"Java"}).count()
+
+db.Training.find().sort({lang:1})
+
+db.Training.find().sort({lang:-1})
+
+db.Training.update({"lang":"Ruby on Rails"},{$set:{"lang":"RoR"}})
+
+db.Training.remove({"name":"abc"})
+
+db.Training.deleteOne({"name":"abc"})
